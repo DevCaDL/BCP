@@ -1,5 +1,5 @@
 REM This is the BCP batch file
-REM V 0.0.3
+REM V 0.0.4
 REM Created 3/20/2017
 REM Creator::Caleb Lochner
 
@@ -8,7 +8,7 @@ REM Creator::Caleb Lochner
 REM Main title Screen
 REM A section to change color will be added soon
 :main
-title BCP V 0.0.3
+title BCP V 0.0.4
 cls
 echo ========================
 echo 01_Progam Directory
@@ -31,7 +31,7 @@ goto main
 
 REM This is the Help Menu (Update when script is updated)
 :help
-title BCP V 0.0.3 Help
+title BCP V 0.0.4 Help
 cls
 color 07
 echo This is the help menu
@@ -49,7 +49,7 @@ goto help
 
 REM Program directory will run\open files
 :01
-title BCP V 0.0.3 Program Directory
+title BCP V 0.0.4 Program Directory
 cls
 color 07
 echo =======================
@@ -61,16 +61,16 @@ echo Main Menu
 echo ========================
 echo.
 set /p section01=Select the program you want to run 
-if %section01%==CMD goto cmd
-if %section01%==cmd goto cmd
-if %section01%==Notepad goto note 
-if %section01%==notepad goto note
-if %section01%==Chrome goto chrome
-if %section01%==chrome goto chrome
-if %section01%==Sticky Notes goto sn
-if %section01%==sticky notes goto sn
+if %section01%==01 goto cmd
+if %section01%==02 goto note
+if %section01%==03 goto chrome
+if %section01%==04 goto sn
 if %section01%==Main goto main
 if %section01%==main goto main
+goto 01
+
+:cmd
+start
 goto 01
 REM Custom commands will hold a list of my custom commands and functions
 :02
